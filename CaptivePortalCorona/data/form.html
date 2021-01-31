@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Covid-19 Registration</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta name="viewport" content="width=device-width, 
+initial-scale=1.0"> 
+<style>
+body {
+  background-color: #a0a0a0;
+  font-family:Arial;
+  font-size: 95%;
+}
+
+input[type=tel], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.background {
+  border-radius: 8px;
+  background-color: #e2e2e2;
+  padding: 30px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="background" id="all">
+<form action="/evaluation" method="post">
+
+  <label>Do you have symptoms that are typical of Covid-19, such as cough, runny nose, hoarseness or fever?</label><br>
+  <input id="strue" type="radio"name="symptoms" value="true">
+  <label for="strue">Yes</label><br>
+  <input id="sfalse" type="radio" name="symptoms" value="false" required>
+  <label for="sfalse">No</label><br><br>
+  
+  
+  <label>Have you had contact with someone who can be proven to have Covid-19 in the last 14 days?</label><br>
+  <input type="radio"  id="ctrue" name="contact" value="true">
+  <label for="ctrue">Yes</label><br>
+  <input type="radio"  id="cfalse" name="contact" value="false" required>
+  <label for="cfalse">No</label><br><br>
+
+  
+  <label>First name:</label><br>
+  <input type="text" name="firstName" placeholder="Your first name..." required><br>
+  <label>Last name:</label><br>
+  <input type="text" name="lastName" placeholder="Your last name..." required><br><br>
+
+  
+  <label>Address:</label><br>
+  <input type="text" name="address" placeholder="Your address..." required><br>
+  
+  <label>Phone number:</label><br>
+  <input type="tel" name="phoneNumber" placeholder="Your phone number..." required><br><br>
+  
+
+  <input type="checkbox" id="korrekt" required>
+  <label for="korrekt">I confirm that all information has been filled in correctly.</label><br><br>
+
+  
+  <input type="checkbox" id="agb" name="agb" value="ok" required>
+  <label for="agb">I accept the <a href="/termsAndConditions.html">Terms and Conditions</a>.</label><br><br>
+  
+  <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
