@@ -54,10 +54,7 @@ void handleRoot() {
   Serial.print("Answering with root to: ");
   Serial.println(server.uri());
   if(sdCardWorking && rtcWorking){
-  server.sendHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-  server.sendHeader("Pragma", "no-cache");
-  server.sendHeader("Expires", "-1");
-  sendFile("/form.html");
+  sendFile("/form.html"); //ToDo: prevent the user from going back to the form when alredy submitted
   }else{
   handleError();   
   }
@@ -100,7 +97,7 @@ void evaluateData(){
     phoneNumber = server.arg(5); 
     }
 
-    if(!contact && !symptoms){
+    if(!contact && !symptoms){ //if the access will be permitted
   Serial.print("  Saving data...");
   customLogFileEntry = id;
   customLogFileEntry += ";";
