@@ -1,4 +1,4 @@
-# 001_Covid-19_Guest_Registration-ESP8266_Captive_Portal
+# Covid-19 Guest Registration - ESP8266 Captive Portal
 
 <h1>The project...</h1>
 
